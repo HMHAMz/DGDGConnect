@@ -1,0 +1,2 @@
+D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.UWP\DGDGConnect.UWP.csproj;x86
+D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.csproj;neutral
