@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DGDGConnect"
+             x:Class="DGDGConnect.CallerTutorialPage">
+    <ContentPage.Padding>
+        <!-- Defines platform specific padding thicknesses-->
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="10, 20, 10, 10"
+                    Android="10, 10, 10, 10"
+                    WinPhone="10, 10, 10, 10" />
+    </ContentPage.Padding>
+    <!--    EXTERNAL CODE
+            URL: https://developer.xamarin.com/guides/xamarin-forms/getting-started/hello-xamarin-forms/quickstart/
+            AUTHOR: developer.xamarin.com
+    -->
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="15">
+            <Label Text="Enter a Phoneword:" />
+            <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+            <!-- Text Entry Field -->
+            <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+            <!-- Button (Handled) -->
+            <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+            <!-- Another Button (Handled) -->
+            <!-- END EXTERNAL CODE -->
+            <Label Text="This is a label" />
+            <!-- A Label that will function accross all platforms-->
+            <Button x:Name="JustButton" Text="Just a Button" IsEnabled="false"/>
+            <!-- A basic unhandled button -->
+            <Switch x:Name="JustSwitch" HorizontalOptions = "LayoutOptions.Center" VerticalOptions = "LayoutOptions.CenterAndExpand" />
+            <!-- A basic unhandled switch -->
+
+            <!--
+            <Slider x:Name="JustSlider" Maximum = "0" Minimum="10" Value="5"/> -->
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -16,3 +16,4 @@ D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConn
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect\bin\Debug\Mono.Android.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect\bin\Debug\Mono.Android.pdb
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect\bin\Debug\Mono.Android.xml
+D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.CallerTutorialPage.xaml.g.cs
