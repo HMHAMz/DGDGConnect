@@ -24,7 +24,7 @@
             <!-- Text Entry Field -->
             <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
             <!-- Button (Handled) -->
-            <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+            <Button x:Name="callButton" Text="Call" IsEnabled="False" Clicked="OnCall" />
             <!-- Another Button (Handled) -->
             <!-- END EXTERNAL CODE -->
             <Label Text="This is a label" />

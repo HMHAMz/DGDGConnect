@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DGDGConnect"
-             x:Class="DGDGConnect.MainPage">
+             x:Class="DGDGConnect.MainPage"
+             Title="{Binding AppTitle}"
+             BackgroundColor= "#fe0036">
     <ContentPage.Padding>
         <!-- Defines platform specific padding thicknesses-->
         <OnPlatform x:TypeArguments="Thickness"
@@ -11,17 +13,23 @@
                     WinPhone="10, 10, 10, 10" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand"
-                     HorizontalOptions="FillAndExpand"
-                     Orientation="Vertical"
-                     Spacing="15">
-            <Label Text="This is a label" /> <!-- A Label that will function accross all platforms-->
-            <Button x:Name="JustButton" Text="Just a Button" IsEnabled="false"/> <!-- A basic unhandled button -->
-            <Switch x:Name="JustSwitch" HorizontalOptions = "LayoutOptions.Center" VerticalOptions = "LayoutOptions.CenterAndExpand" /> <!-- A basic unhandled switch -->
-            
-            <!--
-            <Slider x:Name="JustSlider" Maximum = "0" Minimum="10" Value="5"/> -->
-        </StackLayout>
+        <AbsoluteLayout VerticalOptions="FillAndExpand"  
+                HorizontalOptions="FillAndExpand">
+            <Image Source="DGDGLogoAND.png"
+                   AbsoluteLayout.LayoutBounds=".5,0.2,0.8,.6" AbsoluteLayout.LayoutFlags="All"
+                   HorizontalOptions="Center" />
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         Spacing="15"
+                         AbsoluteLayout.LayoutBounds="0,0.9,1,0.3" AbsoluteLayout.LayoutFlags="All">
+                <Label Text="This is the Root Page" VerticalOptions="End"/>
+                <Label Text="Login Page" VerticalOptions="End"/>
+                <Button x:Name="LoginButton" Text="Login" IsEnabled="true" Clicked="RootLogin" VerticalOptions="End"/>
+                <Label VerticalOptions="End" HorizontalOptions="Center" Text="Don't have an account?" />
+                <Label VerticalOptions="End" HorizontalOptions="Center" Text="Click here"/>
+            </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 
 </ContentPage>  

@@ -26,12 +26,12 @@ D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConn
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
-D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Collections.dll
-D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ObjectModel.dll
-D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ComponentModel.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Reflection.dll
+D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Collections.dll
+D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ObjectModel.dll
+D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.IO.dll
 D:\Projects\MobileComputing\Project\DGDGConnect\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll
