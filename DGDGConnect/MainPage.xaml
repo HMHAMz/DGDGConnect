@@ -5,6 +5,7 @@
              x:Class="DGDGConnect.MainPage"
              Title="{Binding AppTitle}"
              BackgroundColor= "#fe0036">
+    <!-- Colour Scheme: MUTED RED:#ff7a90 BLUE:#7ad3ff GREEN:#7affa6-->
     <ContentPage.Padding>
         <!-- Defines platform specific padding thicknesses-->
         <OnPlatform x:TypeArguments="Thickness"
@@ -25,7 +26,7 @@
                          AbsoluteLayout.LayoutBounds="0,0.9,1,0.3" AbsoluteLayout.LayoutFlags="All">
                 <Label Text="This is the Root Page" VerticalOptions="End"/>
                 <Label Text="Login Page" VerticalOptions="End"/>
-                <Button x:Name="LoginButton" Text="Login" IsEnabled="true" Clicked="RootLogin" VerticalOptions="End"/>
+                <Button x:Name="LoginButton" Text="Login" IsEnabled="true" Clicked="RootLogin" VerticalOptions="End" BackgroundColor="#7ad3ff"/>
                 <Label VerticalOptions="End" HorizontalOptions="Center" Text="Don't have an account?" />
                 <Label VerticalOptions="End" HorizontalOptions="Center" Text="Click here"/>
             </StackLayout>
