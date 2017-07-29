@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DGDGConnect.MainMenu">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ViewCell x:Key="menuTemplate">
+                    <StackLayout >
+                        <Label Text="{Binding Name}" Font="15,Bold" />
+                        <Label Text="{Binding Address}"/>
+                    </StackLayout>
+            </ViewCell>
+            <ViewCell x:Key="TestTemplate"></ViewCell>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+</ContentPage>

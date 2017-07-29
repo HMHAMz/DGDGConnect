@@ -7,11 +7,27 @@ using Xamarin.Forms;
 
 namespace DGDGConnect
 {
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
-	}
+   
+    public partial class MainPage : ContentPage
+    {
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        void JustButtonMethod(object sender, EventArgs e)
+        {
+            //await Navigation.PushAsync(new CallerTutorialPage());
+        }
+
+        async void RootLogin(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MainMenu());
+        }
+
+    }
+
+    
+
 }

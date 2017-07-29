@@ -2140,7 +2140,7 @@
           }
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -2157,6 +2157,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     },
     "UAP,Version=v10.0/win10-arm": {
@@ -4406,7 +4409,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -4423,6 +4426,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
@@ -6711,7 +6717,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -6728,6 +6734,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     },
     "UAP,Version=v10.0/win10-x64": {
@@ -8986,7 +8995,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -9003,6 +9012,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
@@ -11300,7 +11312,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -11317,6 +11329,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     },
     "UAP,Version=v10.0/win10-x86": {
@@ -13575,7 +13590,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -13592,6 +13607,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
@@ -15889,7 +15907,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -15906,6 +15924,9 @@
         "build": {
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
+      },
+      "DGDGConnect/1.0.0": {
+        "type": "project"
       }
     }
   },
@@ -22076,10 +22097,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Xamarin.Forms/2.3.4.224": {
-      "sha512": "cjA3h83bCmnEjEYLcvi2n+rPc3rs3kuB/r5z5R/BFtBLp8kgV8AEImKBcYglsZ80uX3OSIVnPXN9lJ25GMGAmg==",
+    "Xamarin.Forms/2.3.4.247": {
+      "sha512": "+6VN8IBSah7EcNJ4SV3pIhNA8tNlBaPLfr3+hQpPIllueJrXI5QtjM0tAJusPc2V1cYyC4YKvA1fs5c/A8RrBw==",
       "type": "package",
-      "path": "xamarin.forms/2.3.4.224",
+      "path": "xamarin.forms/2.3.4.247",
       "files": [
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Mdb.dll",
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Pdb.dll",
@@ -22168,6 +22189,7 @@
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Core.pdb",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Core.xml",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Platform.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Platform.dll.mdb",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Platform.pdb",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Xaml.dll",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Xaml.dll.mdb",
@@ -22229,15 +22251,20 @@
         "lib/wpa81/Xamarin.Forms.Platform.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.2.3.4.224.nupkg.sha512",
+        "xamarin.forms.2.3.4.247.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "DGDGConnect/1.0.0": {
+      "type": "project",
+      "path": "../DGDGConnect/DGDGConnect.csproj",
+      "msbuildProject": "../DGDGConnect/DGDGConnect.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
-      "Xamarin.Forms >= 2.3.4.224"
+      "Xamarin.Forms >= 2.3.4.247"
     ],
     "UAP,Version=v10.0": []
   },
@@ -22246,15 +22273,24 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\Projects\\MobileComputing\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
+      "projectUniqueName": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
       "projectName": "DGDGConnect.UWP",
-      "projectPath": "D:\\Projects\\MobileComputing\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
-      "projectJsonPath": "D:\\Projects\\MobileComputing\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\project.json",
-      "projectStyle": "ProjectJson"
+      "projectPath": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
+      "projectJsonPath": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\project.json",
+      "projectStyle": "ProjectJson",
+      "frameworks": {
+        "uap10.0": {
+          "projectReferences": {
+            "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.csproj": {
+              "projectPath": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.csproj"
+            }
+          }
+        }
+      }
     },
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-      "Xamarin.Forms": "2.3.4.224"
+      "Xamarin.Forms": "2.3.4.247"
     },
     "frameworks": {
       "uap10.0": {}
