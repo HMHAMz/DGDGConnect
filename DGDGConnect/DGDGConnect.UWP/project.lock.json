@@ -22273,16 +22273,16 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
+      "projectUniqueName": "D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
       "projectName": "DGDGConnect.UWP",
-      "projectPath": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
-      "projectJsonPath": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\project.json",
+      "projectPath": "D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\DGDGConnect.UWP.csproj",
+      "projectJsonPath": "D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.csproj": {
-              "projectPath": "D:\\Projects\\MobileComputing\\Project\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.csproj"
+            "D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.csproj": {
+              "projectPath": "D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect\\DGDGConnect.csproj"
             }
           }
         }

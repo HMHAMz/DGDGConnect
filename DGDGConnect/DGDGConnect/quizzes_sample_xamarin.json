@@ -1,0 +1,11 @@
+
+  {
+	"id": "quiz01",
+	"title": "Mood Survey",
+	"questions": [
+		{"id": 1, "text": "Date", "type": "date", "help": "The date you started this quiz."},
+  		{"id": 2, "text": "Name", "type": "textbox", "help": "Your full name"},
+  		{"id": 3, "text": "Diary", "type": "textarea", "help": "Write 4 paragraphs"},
+  		{"id": 4, "text": "Gender", "type": "choice", "options": ["Male", "Female", "Depends what day it is"]}
+	]
+  }
