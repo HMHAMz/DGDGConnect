@@ -26,22 +26,9 @@ namespace DGDGConnect
             LoadJson(); //Load the Json resource file into memory
 
             Grid QuizViewGrid = BuildOptionsView(); //Instantiate and get the Grid view containing the of quiz options.
-            
 
-            Content = QuizViewGrid; //Add the StackLayout onto the view content
-            /*var stack = new StackLayout();
+            Content = QuizViewGrid; //Set the Grid as the page content
 
-            for (int i = 0; i < 3; i++)
-            {
-                stack.Children.Add(new Button { Text = "Button " + i });
-            }
-
-            //Content = new ScrollView { Content = stack };*/
-
-            //Content = new StackLayout { Content = QuizViewGrid }; //Add the StackLayout onto the view content
-
-            //DisplayAlert("Alert", "Grid built and content set.", "OK"); //! Debug code, to be removed
-            //InitializeComponent();
         }
 
 
