@@ -10,7 +10,7 @@ namespace DGDGConnect
     public class QuizRun : ContentPage
     {
 
-        int questionViewRows = 2;
+        int questionViewRows = 3;
         Quiz thisQuiz;
 
         public QuizRun(Quiz p_Quiz)
@@ -20,7 +20,7 @@ namespace DGDGConnect
             StackLayout PageStack = new StackLayout
             {
                 Children = {
-                    new Label { Text = "Your are currently doing the " + thisQuiz.title.ToString()}
+                    new Label { Text = "Welcome to the " + thisQuiz.title.ToString() + "."}
                 }
             };
 
@@ -46,7 +46,7 @@ namespace DGDGConnect
                 index++;
                 //Create the element vars
                 var questionLabel = new Label { FontAttributes = FontAttributes.Bold };
-                var helpLabel = new Label { HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center };
+                var helpLabel = new Label { HorizontalTextAlignment = TextAlignment.Start, VerticalTextAlignment = TextAlignment.Center };
 
                 //Set the Bindings
                 questionLabel.SetBinding(Label.TextProperty, "text");
@@ -54,7 +54,6 @@ namespace DGDGConnect
 
                 //Set the Binding Contexts
                 questionLabel.BindingContext = quizQuestion;
-
                 helpLabel.BindingContext = quizQuestion;
 
                 /*Add the elements to the parent Grid
@@ -62,9 +61,49 @@ namespace DGDGConnect
                 quizGrid.Children.Add(questionLabel, 0, index * questionViewRows);
                 quizGrid.Children.Add(helpLabel, 0, index * questionViewRows+1);
 
+                //The following if statements will get the question type and dynamically implement the required data entry element
+                if (quizQuestion.type == "date")
+                {
+                    DatePicker datePicker = new DatePicker
+                    {
+                        Format = "D",
+                        VerticalOptions = LayoutOptions.CenterAndExpand,
+                        HorizontalOptions = LayoutOptions.End
+                    };
+
+                    quizGrid.Children.Add(datePicker, 0, index * questionViewRows + 2);
+                }
+                else if (quizQuestion.type == "textbox")
+                {
+                    var textbox = new Entry { Placeholder = "Short answer..." };
+                    quizGrid.Children.Add(textbox, 0, index * questionViewRows + 2);
+                }
+                else if (quizQuestion.type == "textarea")
+                {
+                    var textarea = new Editor() { HeightRequest = 100 };
+                    quizGrid.Children.Add(textarea, 0, index * questionViewRows + 2);
+                }
+                else if (quizQuestion.type == "choice")
+                {
+                    var picker = new Picker();
+                    foreach (string p_choice in quizQuestion.options)
+                    {
+                        picker.Items.Add(p_choice);
+                    }
+                    quizGrid.Children.Add(picker, 0, index * questionViewRows + 2);
+                }
+
             }
 
+            quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
+
             return quizGrid;
+        }
+
+        Grid AddNewRow(Grid q_Grid)
+        {
+            q_Grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto, });
+            return q_Grid;
         }
 
         Grid BuildQuestionGrid()
@@ -93,7 +132,7 @@ namespace DGDGConnect
             {
                 for (int i = 1; i <= questionViewRows; i++)
                 {
-                    questionGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+                    questionGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto,  });
                 }
             }
 

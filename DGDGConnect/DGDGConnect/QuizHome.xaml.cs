@@ -107,7 +107,9 @@ namespace DGDGConnect
                 quizGrid.Children.Add(goButton, 2, index * quizViewRows);
 
                 //Set any advance row/grid spanning
+                Grid.SetRowSpan(idLabel, 2);
                 Grid.SetRowSpan(goButton, 2);
+                
 
                 //grid.Children.Add(switcher, 1, 3);
 
