@@ -18,48 +18,23 @@ namespace DGDGConnect
     public partial class QuizHome : ContentPage
     {
         Stream stream;
-        /*DataTemplate QuizBoolTemplate;
-
-        private ObservableCollection<MenuModel> quizQuestionContainer { get; set; }//Observable Collection is used such that the ListView will update real-time if items are removed or added! */
+        
         public QuizHome()
         {
-            loadJsonAsync();
-            /*BuildQuizTemplates();
-
-            quizQuestionContainer = new ObservableCollection<MenuModel>(); //Contains menu items as an Observable Collection, meaning they can be adjusted during runtime and updated
-            ListView menuView = new ListView();
-            menuView.ItemsSource = quizQuestionContainer;
-            menuView.ItemTemplate = QuizBoolTemplate; //Applies the item template to the menu list view
-
-            //Add the Menu Items to the list, using the model defined in the MenuModel class.
-            quizQuestionContainer.Add(new MenuModel("Games", "DGDG member games", false, "image.jpg", "Games Link"));
-            quizQuestionContainer.Add(new MenuModel("Social", "Connect with other members", false, "image.jpg", "Social Link"));
-            quizQuestionContainer.Add(new MenuModel("Events", "Get details on upcoming events", false, "image.jpg", "Events Link"));
-            quizQuestionContainer.Add(new MenuModel("News", "News worth reading", false, "image.jpg", "News Link"));
-            quizQuestionContainer.Add(new MenuModel("Resources", "DGDG curated resources", false, "image.jpg", "Resources Link"));
-
-
-
-            //Create the StackLayout that contains the Menu
-            var QuizViewStack = new StackLayout
-            {
-                Padding = new Thickness(0, 20, 0, 0),
-            };
-            QuizViewStack.Children.Add(menuView); //Add the menu list view to the Menu View Stack
-
-            Content = QuizViewStack; //Add the StackLayout onto the view content*/
+            loadJson();
 
             InitializeComponent();
         }
 
-        void loadJsonAsync()
+        void loadJson()
         {
             
+            /*This try statement will attempt to load the json file from the local resources
+             * The stream reader will convert that stream into a string variable
+             Our Json API will then deserialize that string into the referenced object.
+             If the attempt fails, the details will be displayed in an alert message.*/
             try
             {
-                //string jsonInput = System.IO.File.ReadAllText("example.json", Encoding.UTF8);
-                //Console.OutputEncoding = Encoding.UTF8;
-                //Console.WriteLine(allText);
                 var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
                 stream = assembly.GetManifestResourceStream("DGDGConnect.quizzes_sample_xamarin.json");
                 string jsonInput = "";
@@ -67,12 +42,9 @@ namespace DGDGConnect
                 {
                     jsonInput = reader.ReadToEnd();
                 }
-                //IFolder rootFolder = FileSystem.Current.LocalStorage;
-                //var dataFile = await rootFolder.GetFileAsync("quizzes_sample_xamarin.json");
-
-                //var jsonInput = await dataFile.ReadAllTextAsync();
-                Quiz temp = JsonConvert.DeserializeObject<Quiz>(jsonInput);
-                DisplayAlert("Alert", "Unknown exception..." + temp.title.ToString(), "OK");
+                
+                Quiz[] temp = JsonConvert.DeserializeObject<Quiz[]>(jsonInput);
+                DisplayAlert("Alert", "Json File Loaded. Title value: " + temp[2].title.ToString(), "OK");
             }
             catch (FileNotFoundException ex)
             {
