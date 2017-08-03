@@ -17,7 +17,9 @@ namespace DGDGConnect
         {
             thisQuiz = p_Quiz;
 
-            StackLayout PageStack = new StackLayout
+            var scrollView = new ScrollView();
+
+            StackLayout pageStack = new StackLayout
             {
                 Children = {
                     new Label { Text = "Welcome to the " + thisQuiz.title.ToString() + "."}
@@ -26,9 +28,11 @@ namespace DGDGConnect
 
             Grid QuizViewGrid = BuildQuestionsView(); //Instantiate and get the Grid view containing the of quiz options.
 
-            PageStack.Children.Add(QuizViewGrid);
+            pageStack.Children.Add(QuizViewGrid);
 
-            Content = PageStack;
+            scrollView.Content = pageStack;
+
+            Content = scrollView;
             //Content = QuizViewGrid; //Set the Grid as the page content
         }
 
@@ -92,6 +96,7 @@ namespace DGDGConnect
                     }
                     quizGrid.Children.Add(picker, 0, index * questionViewRows + 2);
                 }
+                //END Quiz Answer Type Statement
 
             }
 
