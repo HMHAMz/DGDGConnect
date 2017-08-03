@@ -43,3 +43,4 @@ D:\Projects\MobileComputing\Project\Clone\DGDGConnect\DGDGConnect\DGDGConnect\ob
 D:\Projects\MobileComputing\Project\Clone\DGDGConnect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.QuizHome.xaml.g.cs
 D:\Projects\MobileComputing\Project\Clone\DGDGConnect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.dll
 D:\Projects\MobileComputing\Project\Clone\DGDGConnect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.pdb
+D:\Projects\MobileComputing\Project\Clone\DGDGConnect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.TestPage.xaml.g.cs

@@ -24,6 +24,7 @@ namespace DGDGConnect
         async void RootLogin(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new QuizHome { Title = "Quiz Home" });
+            //await Navigation.PushAsync(new TestPage { Title = "Test Page" });
         }
 
     }
