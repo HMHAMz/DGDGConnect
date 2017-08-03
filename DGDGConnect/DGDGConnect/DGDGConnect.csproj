@@ -57,6 +57,7 @@
       <DependentUpon>QuizHome.xaml</DependentUpon>
     </Compile>
     <Compile Include="QuizQuestion.cs" />
+    <Compile Include="QuizRun.cs" />
     <Compile Include="Quizzes.xaml.cs">
       <DependentUpon>Quizzes.xaml</DependentUpon>
     </Compile>

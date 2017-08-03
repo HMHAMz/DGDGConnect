@@ -88,30 +88,44 @@ namespace DGDGConnect
             foreach (Quiz quizFocus in quizArray)
             {
                 index++;
+                //Create the element vars
                 var titleLabel = new Label { FontAttributes = FontAttributes.Bold };
-                var commentLabel = new Label { FontAttributes = FontAttributes.Italic };
-                var imageLabel = new Label { HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center };
+                var scoreLabel = new Label { FontAttributes = FontAttributes.Italic };
+                var idLabel = new Label { HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center };
+                var goButton = new Button { Text = "Go" };
                 //var switcher = new Switch { }; //!Debug Code, to be removed
-                var testLabel = new Label { Text = "Test", FontAttributes = FontAttributes.Bold };
 
+                //Set the button links
+                goButton.Clicked += delegate {
+                    OpenQuiz(quizFocus);
+                };
+
+                //Set the Bindings
                 titleLabel.SetBinding(Label.TextProperty, "title");
-                commentLabel.SetBinding(Label.TextProperty, "id");
-                imageLabel.SetBinding(Label.TextProperty, "score");
+                //scoreLabel.SetBinding(Label.TextProperty, "score"); //! Removed from UI
+                idLabel.SetBinding(Label.TextProperty, "id");
+
+                //Set the Binding Contexts
                 titleLabel.BindingContext = quizFocus;
-                commentLabel.BindingContext = quizFocus;
-                imageLabel.BindingContext = quizFocus;
+                //scoreLabel.BindingContext = quizFocus; //! Removed from UI
+                idLabel.BindingContext = quizFocus;
+
                 //switcher.SetBinding(Switch.IsToggledProperty, "ToggleAnswer");
 
-                quizGrid.Children.Add(testLabel, 1, index * quizViewRows);//! Debug code, to be removed
-                quizGrid.Children.Add(titleLabel, 1, index*quizViewRows);
-                //DisplayAlert("Alert", "titlelabel added to quizRow #: " + index * quizViewRows, "OK"); //! Debug code, to be removed
-                quizGrid.Children.Add(commentLabel, 1, index * quizViewRows + 1);
-                quizGrid.Children.Add(imageLabel, 0, index * quizViewRows);
+                /*Add the elements to the parent Grid
+                 *index * quizViewRows = The current Quiz Index's row*/
+                quizGrid.Children.Add(titleLabel, 1, index * quizViewRows);
+                //quizGrid.Children.Add(scoreLabel, 1, index * quizViewRows + 1); //! Removed from UI
+                quizGrid.Children.Add(idLabel, 0, index * quizViewRows);
+                quizGrid.Children.Add(goButton, 2, index * quizViewRows);
+
+                //Set any advance row/grid spanning
+                Grid.SetRowSpan(goButton, 2);
+
                 //grid.Children.Add(switcher, 1, 3);
 
-                //DisplayAlert("Alert", "Quiz " + index + " processed...", "OK"); //! Debug code, to be removed
             }
-            //DisplayAlert("Alert", "Grid row definitions: " + quizGrid.RowDefinitions.Count(), "OK"); //! Debug code, to be removed
+            
             return quizGrid;
         }
 
@@ -121,7 +135,7 @@ namespace DGDGConnect
              * Programmer: Harry Martin
              * Description: This method builds the Grid container that will hold all the Quiz list UI labels
              This is done dynamically based on the number of quiz elements in the Quiz Array loaded*/
-            var quizGrid = new Grid() //The grid defines the layout of the elements added below this definition
+            var quizGrid = new Grid() 
             {
                 RowSpacing = 2,
                 VerticalOptions = LayoutOptions.FillAndExpand,
@@ -131,6 +145,7 @@ namespace DGDGConnect
                     },
                 ColumnDefinitions =
                     {
+                    new ColumnDefinition { Width = GridLength.Auto },
                     new ColumnDefinition { Width = GridLength.Auto },
                     new ColumnDefinition { Width = GridLength.Auto }
                     }
@@ -144,8 +159,19 @@ namespace DGDGConnect
                     //DisplayAlert("Alert", "Row added to quizGrid: " + i, "OK"); //! Debug code, to be removed
                 }
             }
+
+            quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
+
             return quizGrid;
         }
-      
+
+        async void OpenQuiz(Quiz TargetQuiz)
+        {
+            /* Method: OpenQuiz
+            * Programmer: Harry Martin
+            * Description: This method adds a new QuizRun page to the Navigation stack and passes the selected quiz object */
+            await Navigation.PushAsync(new QuizRun(TargetQuiz) { Title = "Title: " + TargetQuiz.title.ToString() });
         }
+      
     }
+}
