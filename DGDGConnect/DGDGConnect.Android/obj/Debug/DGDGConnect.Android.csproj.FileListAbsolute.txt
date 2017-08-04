@@ -155,3 +155,4 @@ D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.A
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\drawable\quickquiz512.png

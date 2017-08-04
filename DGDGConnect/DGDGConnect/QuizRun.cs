@@ -45,7 +45,7 @@ namespace DGDGConnect
                     PageQuestions[index_PageQuestions] = thisQuiz.questions[question_i]; //add the question to the new array
                     index_PageQuestions++;
                 }
-                DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
+                //DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK"); //! Debug Code - to remove
                 /*if (thisQuiz.questionsPerPage.Count() > 1)
                 {
                     DisplayAlert("Alert", "Multiple Pages to be displayed... \n Current Page = " + currentPage + "\n Number of pages = " + thisQuiz.questionsPerPage.Count() + " \n Questions per page = " + String.Join(", ", thisQuiz.questionsPerPage.ToArray()) + "\n Current Page Max Q ID = " + thisQuiz.questionsPerPage[currentPage - 1], "OK");
@@ -170,13 +170,13 @@ namespace DGDGConnect
 
                 quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
 
-                DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
+                //DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK"); //!Debug Code - to remove
 
                 /* Add the 'Next Page' button IF there are more questions to display.
                  * OR add the 'Complete' button otherwise... */
                 if (maxQ < thisQuiz.questions.Count())
                 {
-                    var nextButton = new Button { Text = "Next Page" };
+                    var nextButton = new Button { Text = "Next Page", BackgroundColor = Color.FromHex("#95e4ff") };
 
                     quizGrid.Children.Add(nextButton, 0, maxQ * questionViewRows + 3);
                     Grid.SetColumnSpan(nextButton, 2); //Set advance row/grid spanning
@@ -193,7 +193,7 @@ namespace DGDGConnect
                 }
                 else
                 {
-                    var completeButton = new Button { Text = "Complete" };
+                    var completeButton = new Button { Text = "Complete", BackgroundColor = Color.FromHex("#95e4ff") };
 
                     quizGrid.Children.Add(completeButton, 0, maxQ * questionViewRows + 3);
                     Grid.SetColumnSpan(completeButton, 2); //Set advance row/grid spanning

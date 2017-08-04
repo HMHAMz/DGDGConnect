@@ -59,7 +59,7 @@ namespace DGDGConnect
                 }
                 
                 quizArray = JsonConvert.DeserializeObject<Quiz[]>(jsonInput);
-                DisplayAlert("Alert", "Json File Loaded. Title #2 value: " + quizArray[1].title.ToString(), "OK"); //! Debug code, to be removed
+                // DisplayAlert("Alert", "Json File Loaded. Title #2 value: " + quizArray[1].title.ToString(), "OK"); //! Debug code, to be removed
             }
             catch (FileNotFoundException ex)
             {
@@ -87,11 +87,11 @@ namespace DGDGConnect
                 var titleLabel = new Label { FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Start};
                 var scoreLabel = new Label { FontAttributes = FontAttributes.Italic };
                 var idLabel = new Label { HorizontalTextAlignment = TextAlignment.Start, VerticalTextAlignment = TextAlignment.Center };
-                var goButton = new Button { Text = "Go" };
+                var goButton = new Button { Text = "Go", BackgroundColor = Color.FromHex("#95e4ff") };
                 //var switcher = new Switch { }; //!Debug Code, to be removed
 
                 //Set the button links
-                goButton.Clicked += delegate {
+                    goButton.Clicked += delegate {
                     OpenQuiz(quizFocus);
                 };
 
