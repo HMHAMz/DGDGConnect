@@ -29,7 +29,7 @@ namespace DGDGConnect
 
             var scrollView = new ScrollView();
 
-            StackLayout pageStack = new StackLayout();
+            StackLayout pageStack = new StackLayout() { HorizontalOptions = LayoutOptions.StartAndExpand };
 
             pageStack.Children.Add(QuizViewGrid);
 
@@ -84,9 +84,9 @@ namespace DGDGConnect
             {
                 index++;
                 //Create the element vars
-                var titleLabel = new Label { FontAttributes = FontAttributes.Bold };
+                var titleLabel = new Label { FontAttributes = FontAttributes.Bold, HorizontalOptions = LayoutOptions.Start};
                 var scoreLabel = new Label { FontAttributes = FontAttributes.Italic };
-                var idLabel = new Label { HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center };
+                var idLabel = new Label { HorizontalTextAlignment = TextAlignment.Start, VerticalTextAlignment = TextAlignment.Center };
                 var goButton = new Button { Text = "Go" };
                 //var switcher = new Switch { }; //!Debug Code, to be removed
 
@@ -117,7 +117,8 @@ namespace DGDGConnect
                 //Set any advance row/grid spanning
                 Grid.SetRowSpan(idLabel, 2);
                 Grid.SetRowSpan(goButton, 2);
-                
+                Grid.SetColumnSpan(goButton, 2);
+
 
                 //grid.Children.Add(switcher, 1, 3);
 

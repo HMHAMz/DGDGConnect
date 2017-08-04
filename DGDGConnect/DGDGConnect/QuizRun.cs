@@ -61,6 +61,8 @@ namespace DGDGConnect
             else
             {
                 PageQuestions = thisQuiz.questions.ToArray();
+                minQ = 0;
+                maxQ = thisQuiz.questions.Count();
             }
         }
 
@@ -68,7 +70,7 @@ namespace DGDGConnect
         {
             var scrollView = new ScrollView();
 
-            StackLayout pageStack = new StackLayout();
+            StackLayout pageStack = new StackLayout { HorizontalOptions = LayoutOptions.Center };
 
             var Header = new Label { Text = "You are completing the " + thisQuiz.title.ToString() + "." };
 
@@ -161,16 +163,23 @@ namespace DGDGConnect
                         Grid.SetColumnSpan(picker, 2); //Set advance row/grid spanning
                     }
                     //END Quiz Answer Type Statement
+
+                    index++;
                 }
 
 
                 quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
 
-                if (maxQ != thisQuiz.questions.Count())
+                DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
+
+                /* Add the 'Next Page' button IF there are more questions to display.
+                 * OR add the 'Complete' button otherwise... */
+                if (maxQ < thisQuiz.questions.Count())
                 {
                     var nextButton = new Button { Text = "Next Page" };
 
                     quizGrid.Children.Add(nextButton, 0, maxQ * questionViewRows + 3);
+                    Grid.SetColumnSpan(nextButton, 2); //Set advance row/grid spanning
 
                     //Set the button links
                     nextButton.Clicked += delegate
@@ -180,6 +189,19 @@ namespace DGDGConnect
                             currentPage++;
                             updatePageContent();
                         }
+                    };
+                }
+                else
+                {
+                    var completeButton = new Button { Text = "Complete" };
+
+                    quizGrid.Children.Add(completeButton, 0, maxQ * questionViewRows + 3);
+                    Grid.SetColumnSpan(completeButton, 2); //Set advance row/grid spanning
+
+                    //Set the button links
+                    completeButton.Clicked += delegate
+                    {
+                        Navigation.PopAsync();
                     };
                 }
             }
@@ -207,20 +229,21 @@ namespace DGDGConnect
             var questionGrid = new Grid()
             {
                 RowSpacing = 2,
-                VerticalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.Fill,
+                //HorizontalOptions = LayoutOptions.StartAndExpand,
                 RowDefinitions =
                     {
                     new RowDefinition { Height = GridLength.Auto }
                     },
                 ColumnDefinitions =
                     {
-                    new ColumnDefinition { Width = GridLength.Auto },
-                    new ColumnDefinition { Width = GridLength.Auto }
+                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
+                    new ColumnDefinition { Width =  new GridLength(1, GridUnitType.Star) }
                     }
             };
 
-            questionGrid.Children.Clear();
-            questionGrid.RowDefinitions.Clear();
+            //questionGrid.Children.Clear();
+            //questionGrid.RowDefinitions.Clear();
             try
             {
                 foreach (QuizQuestion quizQuestion in PageQuestions)
