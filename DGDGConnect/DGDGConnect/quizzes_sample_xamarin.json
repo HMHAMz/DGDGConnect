@@ -1,26 +1,204 @@
 [
   {
-	"id": "quiz01",
-	"title": "Mood Survey",
-	"questions": [
-		{"id": 1, "text": "Date", "type": "date", "help": "The date you started this quiz."},
-  		{"id": 2, "text": "Name", "type": "textbox", "help": "Your full name"},
-  		{"id": 3, "text": "Diary", "type": "textarea", "help": "Write 4 paragraphs"},
-  		{"id": 4, "text": "Gender", "type": "choice", "options": ["Male", "Female", "Depends what day it is"]}
-	]
+    "id": "quiz01",
+    "title": "Mood Survey",
+    "questions": [
+      {
+        "id": 1,
+        "text": "Date",
+        "type": "date",
+        "help": "The date you started this quiz."
+      },
+      {
+        "id": 2,
+        "text": "Name",
+        "type": "textbox",
+        "help": "Your full name"
+      },
+      {
+        "id": 3,
+        "text": "Diary",
+        "type": "textarea",
+        "help": "Write 4 paragraphs"
+      },
+      {
+        "id": 4,
+        "text": "Gender",
+        "type": "choice",
+        "options": [ "Male", "Female", "Depends what day it is" ]
+      }
+    ]
   },
-	{
-	"id": "quiz02",
-	"title": "Exam Grade",
-	"questionsPerPage": [2,4],
-	"score": 20,
-	"questions": [
-		{"id": 1, "text": "Sid", "type": "textbox", "validate": "/[0-9]+/"},
-  		{"id": 2, "text": "Name", "type": "textbox", "help": "Your full name"},
-  		{"id": 3, "text": "What is the capital of Australia?", "type": "textbox", "answer": "Canberra", "weighting": 5},
-  		{"id": 4, "text": "What is the largest state in Australia?", "type": "textbox", "answer": ["Western Australia", "WA"], "weighting": 5},
-  		{"id": 5, "text": "What is the capital of Victoria?", "type": "choice", "options": ["Sydney", "Brisbane", "Melbourne"], "answer": "Melbourne", "weighting": 5}
+  {
+    "id": "quiz02",
+    "title": "Exam Grade",
+    "questionsPerPage": [ 2, 4 ],
+    "score": 20,
+    "questions": [
+      {
+        "id": 1,
+        "text": "Sid",
+        "type": "textbox",
+        "validate": "/[0-9]+/"
+      },
+      {
+        "id": 2,
+        "text": "Name",
+        "type": "textbox",
+        "help": "Your full name"
+      },
+      {
+        "id": 3,
+        "text": "What is the capital of Australia?",
+        "type": "textbox",
+        "answer": "Canberra",
+        "weighting": 5
+      },
+      {
+        "id": 4,
+        "text": "What is the largest state in Australia?",
+        "type": "textbox",
+        "answer": [ "Western Australia", "WA" ],
+        "weighting": 5
+      },
+      {
+        "id": 5,
+        "text": "What is the capital of Victoria?",
+        "type": "choice",
+        "options": [ "Sydney", "Brisbane", "Melbourne" ],
+        "answer": "Melbourne",
+        "weighting": 5
+      }
 
-	]
+    ]
+  },
+  {
+    "id": "quiz03",
+    "title": "Game Survey",
+    "questions": [
+      {
+        "id": 1,
+        "text": "What's the first game you recall playing?",
+        "type": "textbox",
+        "help": "The very first"
+      },
+      {
+        "id": 2,
+        "text": "How long do you spend gaming per day",
+        "type": "choice",
+        "help": "Choose the closest matching ammount",
+        "options": [ "5 minutes", "1 hour", "2 hours+" ]
+      },
+      {
+        "id": 3,
+        "text": "When did you last game?",
+        "type": "date",
+        "help": "What day?"
+      },
+      {
+        "id": 4,
+        "text": "Gender",
+        "type": "choice",
+        "options": [ "Male", "Female", "Depends what day it is" ]
+      }
+    ]
+  },
+  {
+    "id": "quiz04",
+    "title": "Favourites Survey",
+    "questions": [
+      {
+        "id": 1,
+        "text": "Colour",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "Red", "Green", "Blue", "Yellow", "Purple", "Black" ]
+      },
+      {
+        "id": 2,
+        "text": "Brand",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "Sony", "Microsoft", "LG" ]
+      },
+      {
+        "id": 3,
+        "text": "Fast food",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "Maccas", "Hungry Jacks", "KFC" ]
+      },
+      {
+        "id": 4,
+        "text": "Shoes",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "High Heels", "Flats", "Skate" ]
+      },
+      {
+        "id": 5,
+        "text": "Coke",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "Coka-Cola", "Pepsi"]
+      },
+      {
+        "id": 6,
+        "text": "School Level",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "High", "Uni", "Primary" ]
+      },
+      {
+        "id": 7,
+        "text": "Appliance",
+        "type": "choice",
+        "help": "Choose your favourite!",
+        "options": [ "Fridge", "Freezer", "Microwave" ]
+      }
+    ]
+  },
+  {
+    "id": "quiz05",
+    "title": "Licensing test",
+    "questionsPerPage": [ 2, 2, 1 ],
+    "score": 20,
+    "questions": [
+      {
+        "id": 1,
+        "text": "License Number",
+        "type": "textbox",
+        "validate": "/[0-9]+/"
+      },
+      {
+        "id": 2,
+        "text": "Name",
+        "type": "textbox",
+        "help": "Your full name"
+      },
+      {
+        "id": 3,
+        "text": "Red light means",
+        "type": "choice",
+        "options": [ "Go", "Stop", "Speed Up" ],
+        "answer": "Stop",
+        "weighting": 5
+      },
+      {
+        "id": 4,
+        "text": "Which side of the road do we drive on?",
+        "type": "textbox",
+        "answer": [ "Left", "L" ],
+        "weighting": 5
+      },
+      {
+        "id": 5,
+        "text": "Give way to oncomming traffic?",
+        "type": "choice",
+        "options": [ "Yes", "No" ],
+        "answer": "Yes",
+        "weighting": 5
+      }
+    ]
   }
 ]

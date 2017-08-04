@@ -27,7 +27,15 @@ namespace DGDGConnect
 
             Grid QuizViewGrid = BuildOptionsView(); //Instantiate and get the Grid view containing the of quiz options.
 
-            Content = QuizViewGrid; //Set the Grid as the page content
+            var scrollView = new ScrollView();
+
+            StackLayout pageStack = new StackLayout();
+
+            pageStack.Children.Add(QuizViewGrid);
+
+            scrollView.Content = pageStack; //enables Scroll functionality 
+
+            Content = scrollView;
 
         }
 
