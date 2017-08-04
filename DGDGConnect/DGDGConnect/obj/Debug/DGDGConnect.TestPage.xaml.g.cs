@@ -11,8 +11,8 @@
 namespace DGDGConnect {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect\\Tes" +
-        "tPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\MobileComputing\\Project\\Revert\\DGDGConnect\\DGDGConnect\\DGDGConnect\\Te" +
+        "stPage.xaml")]
     public partial class TestPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

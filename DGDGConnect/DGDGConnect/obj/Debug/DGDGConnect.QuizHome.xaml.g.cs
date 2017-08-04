@@ -11,8 +11,8 @@
 namespace DGDGConnect {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect\\Qui" +
-        "zHome.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\MobileComputing\\Project\\Revert\\DGDGConnect\\DGDGConnect\\DGDGConnect\\Qu" +
+        "izHome.xaml")]
     public partial class QuizHome : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

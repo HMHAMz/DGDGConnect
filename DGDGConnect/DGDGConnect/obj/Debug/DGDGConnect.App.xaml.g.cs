@@ -11,8 +11,8 @@
 namespace DGDGConnect {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\MobileComputing\\Project\\Clone\\DGDGConnect\\DGDGConnect\\DGDGConnect\\App" +
-        ".xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\MobileComputing\\Project\\Revert\\DGDGConnect\\DGDGConnect\\DGDGConnect\\Ap" +
+        "p.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
