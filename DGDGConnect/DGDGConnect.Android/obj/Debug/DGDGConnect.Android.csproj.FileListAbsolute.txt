@@ -145,14 +145,6 @@ D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.A
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\layout\toolbar.xml
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\values\styles.xml
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\drawable\dgdglogoand.png
+D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\drawable\quickquiz512.png
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\R.cs.flag
 D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\uploadflags.txt
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\bin\Debug\DGDGConnect.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\bin\Debug\DGDGConnect.Android.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\DGDGConnect.Android.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\DGDGConnect.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\Projects\MobileComputing\Project\Revert\DGDGConnect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\drawable\quickquiz512.png
