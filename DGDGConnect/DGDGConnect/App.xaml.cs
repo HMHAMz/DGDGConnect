@@ -17,7 +17,7 @@ namespace DGDGConnect
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.FromHex("#e2f7ff"), BarTextColor = Color.DarkGray };
+            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.FromHex("#fe0036") };
         }
 
         protected override void OnStart()
