@@ -261,3 +261,5 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\ob
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\DGDGConnect.Android.dll.config
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\DGDGConnect.dll.config

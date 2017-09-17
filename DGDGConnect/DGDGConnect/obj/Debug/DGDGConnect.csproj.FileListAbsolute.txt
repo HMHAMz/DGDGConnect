@@ -119,3 +119,13 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.TestPage.xaml.g.cs
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.pdb
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.csproj.App.config
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.Properties.Resources.resources
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.csproj.GenerateResource.Cache
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\DGDGConnect.dll.config
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\System.Net.Http.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\System.Net.Http.Extensions.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\System.Net.Http.Primitives.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\System.Net.Http.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\System.Net.Http.Extensions.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\System.Net.Http.Primitives.xml

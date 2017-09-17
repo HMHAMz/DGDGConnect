@@ -250,6 +250,11 @@ namespace DGDGConnect
                     //Set the button links
                     completeButton.Clicked += delegate
                     {
+                        /* Test GET Code: */
+                        SlowWebHandler WebHandler = new SlowWebHandler();
+                        WebQueryObj TestObj = new WebQueryObj();
+                        String testString = WebHandler.GetResponse(TestObj);
+                        DisplayAlert("Alert", "Test get: " + testString, "OK");
                         Navigation.PopAsync();
                     };
                 }

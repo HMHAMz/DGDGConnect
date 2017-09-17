@@ -18,6 +18,7 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\ob
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\mscorlib.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Core.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Net.Http.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Xml.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Xml.Linq.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Runtime.dll
@@ -30,9 +31,10 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\ob
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.IO.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ObjectModel.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Collections.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Net.Requests.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Xml.XDocument.dll
-D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Runtime.Serialization.Primitives.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll
@@ -49,7 +51,6 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\ob
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Microsoft.CSharp.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Mono.CSharp.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ComponentModel.dll
-D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Net.Http.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Mono.Security.dll
