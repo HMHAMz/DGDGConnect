@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DGDGConnect
 {
-    class Class1
+    public class UserProfile
     {
+        public string username { get; set; }
+        public string password { get; set; }
     }
 }

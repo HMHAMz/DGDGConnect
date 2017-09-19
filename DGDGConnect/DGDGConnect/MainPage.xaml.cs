@@ -10,9 +10,10 @@ namespace DGDGConnect
    
     public partial class MainPage : ContentPage
     {
-
+        ActiveProfile testP;
         public MainPage()
         {
+            testP = ActiveProfile.Instance;
             InitializeComponent();
         }
 
@@ -23,8 +24,11 @@ namespace DGDGConnect
 
         async void RootLogin(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new QuizHome { Title = "Quiz Home" });
-            //await Navigation.PushAsync(new TestPage { Title = "Test Page" });
+
+            await DisplayAlert("Alert", "Username test: " + testP.GetName() , "OK");
+            testP.SetName("Edit Test Name");
+            //await Navigation.PushAsync(new QuizHome { Title = "Quiz Home" });
+            await Navigation.PushAsync(new TestPage { Title = "Test Page" });
         }
 
     }

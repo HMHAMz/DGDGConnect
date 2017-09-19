@@ -3,8 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DGDGConnect.TestPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
+        <AbsoluteLayout VerticalOptions="FillAndExpand"  
+                HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         Spacing="15"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All">
+                <Label Text="This is the Function Testing Page" VerticalOptions="Start" HorizontalOptions="Center"/>
+                <Label Text="Testing page" VerticalOptions="Start" HorizontalOptions="Center"/>
+                <Button x:Name="QuizButton" Text="Quizzes" IsEnabled="true" Clicked="QuizNav" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+                <Button x:Name="HomeButton" Text="Home" IsEnabled="true" Clicked="Exit" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+                <Button x:Name="TestButton" Text="Test HTTP" IsEnabled="true" Clicked="TestHTTP" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+                <Button x:Name="Test2Button" Text="Test User" IsEnabled="true" Clicked="TestSingleton" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+                <Entry x:Name="Test3Entry" Placeholder="Enter password"/>
+                <Button x:Name="Test3Button" Text="Hashing Test" IsEnabled="true" Clicked="TestHash" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+                <Button x:Name="Test4Button" Text="User Load Test" IsEnabled="true" Clicked="TestUserLoad" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+            </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -17,13 +17,14 @@ namespace DGDGConnect
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuizHome : ContentPage
     {
-        Stream stream;
         Quiz[] quizArray;
         int quizViewRows = 2;
 
         public QuizHome()
         {
-            LoadJson(); //Load the Json resource file into memory
+            //LoadJson(); //Load the Json resource file into memory
+            String data = LoadResourceText.GetLocal("DGDGConnect.quizzes_sample_xamarin.json");
+            quizArray = JsonParser.ParseToQuiz(data);
 
             Grid QuizViewGrid = BuildOptionsView(); //Instantiate and get the Grid view containing the of quiz options.
 
@@ -40,17 +41,11 @@ namespace DGDGConnect
         }
 
 
-        void LoadJson()
+        /* void LoadJson()
         {
-            /* Method: LoadJson
-             * Programmer: Harry Martin
-             * Description: This try statement will attempt to load the json file from the local resources
-             The stream reader will convert that stream into a string variable
-             Our Json API will then deserialize that string into the referenced object.
-             If the attempt fails, the details will be displayed in an alert message.*/
             try
             {
-                var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+                var assembly = typeof(QuizHome).GetTypeInfo().Assembly;
                 stream = assembly.GetManifestResourceStream("DGDGConnect.quizzes_sample_xamarin.json");
                 string jsonInput = "";
                 using (var reader = new System.IO.StreamReader(stream))
@@ -69,7 +64,7 @@ namespace DGDGConnect
             {
                 DisplayAlert("Alert", "Unknown exception..." + ex + "\n Json Stream Value: " + stream, "OK");
             }
-        }
+        }*/
 
         Grid BuildOptionsView()
         {

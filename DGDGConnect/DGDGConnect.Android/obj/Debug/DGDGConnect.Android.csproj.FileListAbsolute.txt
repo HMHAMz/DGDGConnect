@@ -263,3 +263,15 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\ob
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\DGDGConnect.Android.dll.config
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\DGDGConnect.dll.config
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PCLCrypto.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.BCrypt.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.Kernel32.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.NCrypt.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.Windows.Core.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\Validation.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PCLCrypto.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.BCrypt.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.Kernel32.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.NCrypt.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.Windows.Core.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\Validation.xml

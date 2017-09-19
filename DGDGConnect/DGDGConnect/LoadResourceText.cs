@@ -5,20 +5,38 @@ using System.IO;
 
 namespace DGDGConnect
 {
-    class LoadResourceText
+    public static class LoadResourceText
     {
-        public LoadResourceText()
+        public static String GetLocal(String location)
         {
-            #region How to load a text file embedded resource
-            var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
-            Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
+            /* Method: GetLocal
+            * Programmer: Harry Martin
+            * Description: This method will attempt to load the json file from the local resources
+            The stream reader will convert that stream into a string variable */
+            String value;
+            Stream stream;
+            var assembly = typeof(JsonParser).GetTypeInfo().Assembly;
 
-            string text = "";
+            stream = assembly.GetManifestResourceStream(location);
+            value = "";
             using (var reader = new System.IO.StreamReader(stream))
             {
-                text = reader.ReadToEnd();
+                value = reader.ReadToEnd();
             }
-            #endregion
+
+            return value;
+        }
+
+        public static String GetNetwork(String url)
+        {
+            /* Method: GetNetwork
+            * Programmer: Harry Martin
+            * Description: This method will attempt to load the json file from the network url
+            The stream reader will convert that stream into a string variable */
+            SlowWebHandler WebHandler = new SlowWebHandler();
+            String value = WebHandler.GetResponse(url, "application/json; charset=utf-8");
+
+            return value;
         }
     }
 }

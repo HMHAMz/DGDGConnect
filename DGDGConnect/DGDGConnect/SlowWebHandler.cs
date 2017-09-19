@@ -16,17 +16,28 @@ namespace DGDGConnect
 
     class SlowWebHandler
     {
-        public String GetResponse(WebQueryObj _wr)
+        public String GetResponse(String webLocation, String type) //accepts a web url and content type, returning result
+        {
+            WebQueryObj queryObj = new WebQueryObj();
+
+            queryObj.url = webLocation;
+
+            var task = MakeAsyncRequest(queryObj, type);
+
+            String getValue = task.Result;
+
+            return getValue;
+        }
+
+        public String GetHTMLResponse(WebQueryObj _wr)
         {
             var task = MakeAsyncRequest(_wr, "text/html");
 
             String getValue = task.Result;
 
             return getValue;
-            // Console.WriteLine("Got response of {0}", task.Result);
         }
 
-        // Define other methods and classes here
         public static Task<string> MakeAsyncRequest(WebQueryObj _wr, string contentType)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_wr.url);
