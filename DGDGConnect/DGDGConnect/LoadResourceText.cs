@@ -27,14 +27,14 @@ namespace DGDGConnect
             return value;
         }
 
-        public static String GetNetwork(String url)
+        public static String GetNetwork(String url, String method)
         {
             /* Method: GetNetwork
             * Programmer: Harry Martin
             * Description: This method will attempt to load the json file from the network url
             The stream reader will convert that stream into a string variable */
             SlowWebHandler WebHandler = new SlowWebHandler();
-            String value = WebHandler.GetResponse(url, "application/json; charset=utf-8");
+            String value = WebHandler.GetResponse(url, "application/json; charset=utf-8", method);
 
             return value;
         }

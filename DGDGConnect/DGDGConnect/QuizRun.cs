@@ -45,7 +45,7 @@ namespace DGDGConnect
                         minQ = minQ + thisQuiz.questionsPerPage[i - 2];
                     }
                     maxQ = minQ + (thisQuiz.questionsPerPage[currentPage - 1]-1); //get max question id
-                    DisplayAlert("Alert", "\nPage Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
+                    //DEBUG: DisplayAlert("Alert", "\nPage Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
                     //Build list of question ID's from min and max question vars
                     for (int i = minQ; i <= maxQ; i++)
                     {
@@ -115,7 +115,7 @@ namespace DGDGConnect
 
                 StackLayout pageStack = new StackLayout { HorizontalOptions = LayoutOptions.Center };
 
-                var Header = new Label { Text = "You are completing the " + thisQuiz.title.ToString() + "." };
+                var Header = new Label { Text = "You are completing the " + thisQuiz.title.ToString() + ".", HorizontalTextAlignment = TextAlignment.Center };
 
                 pageStack.Children.Add(Header);
 
@@ -218,13 +218,13 @@ namespace DGDGConnect
 
                 quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
 
-                DisplayAlert("Alert", "\n Page MinQ id: " + minQ + " \nPage MaxQ id:" + maxQ, "OK");
+                //DEBUG: DisplayAlert("Alert", "\n Page MinQ id: " + minQ + " \nPage MaxQ id:" + maxQ, "OK");
 
                 /* Add the 'Next Page' button IF there are more questions to display.
                  * OR add the 'Complete' button otherwise... */
                 if (maxQ < thisQuiz.questions.Count())
                 {
-                    var nextButton = new Button { Text = "Next Page" };
+                    var nextButton = new Button { Text = "Next Page", VerticalOptions = LayoutOptions.Start};
 
                     quizGrid.Children.Add(nextButton, 0, maxQ * questionViewRows + 3);
                     Grid.SetColumnSpan(nextButton, 2); //Set advance row/grid spanning
@@ -253,6 +253,7 @@ namespace DGDGConnect
                         Navigation.PopAsync();
                     };
                 }
+                DisplayAlert("Alert", "DEBUG: \nNumber of QuizGrid Elements: " + quizGrid.Children.Count(), "OK");
             }
             catch (Exception ex)
             {
@@ -278,11 +279,11 @@ namespace DGDGConnect
             var questionGrid = new Grid()
             {
                 RowSpacing = 2,
-                VerticalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.StartAndExpand,
                 //HorizontalOptions = LayoutOptions.StartAndExpand,
                 RowDefinitions =
                     {
-                    new RowDefinition { Height = GridLength.Auto }
+                    //new RowDefinition { Height = GridLength.Auto }
                     },
                 ColumnDefinitions =
                     {
@@ -291,12 +292,14 @@ namespace DGDGConnect
                     }
             };
 
-            //questionGrid.Children.Clear();
-            //questionGrid.RowDefinitions.Clear();
+            questionGrid.Children.Clear();
+            questionGrid.RowDefinitions.Clear();
             try
             {
-                foreach (QuizQuestion quizQuestion in ThisPageQs)
+                int count = 0;
+                foreach (int QID in PageQIDs)
                 {
+                    count++;
                     //DisplayAlert("Alert", "Adding Question = " + q_index, "OK"); //!Debug - To Remove
                     for (int i = 1; i <= questionViewRows; i++)
                     {
@@ -304,7 +307,8 @@ namespace DGDGConnect
                         //DisplayAlert("Alert", "Adding Question Row = " + i, "OK");//!Debug - To Remove
                     }
                 }
-
+                int count2 = questionGrid.RowDefinitions.Count;
+                DisplayAlert("Alert", "DEBUG: \nTotal Rows added: " + count.ToString() + "\n Total rows: " + count2.ToString(), "OK");
                 questionGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
             }
             catch (Exception ex)

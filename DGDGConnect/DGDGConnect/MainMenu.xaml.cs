@@ -82,27 +82,26 @@ namespace DGDGConnect
                 var nameLabel = new Label { FontAttributes = FontAttributes.Bold };
                 var commentLabel = new Label { FontAttributes = FontAttributes.Italic };
                 var imageLabel = new Label { HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center };
-                var switcher = new Switch { };
+                //var switcher = new Switch { };
                 //var linkString = "";
 
                 nameLabel.SetBinding(Label.TextProperty, "name");
                 commentLabel.SetBinding(Label.TextProperty, "comment");
                 imageLabel.SetBinding(Label.TextProperty, "image");
-                switcher.SetBinding(Switch.IsToggledProperty, "isABool");
+                //switcher.SetBinding(Switch.IsToggledProperty, "isABool");
 
                 //Set the position of each element in the grid
                 grid.Children.Add(nameLabel, 1, 0);
                 grid.Children.Add(commentLabel, 1, 1);
                 grid.Children.Add(imageLabel, 0, 0);
-                grid.Children.Add(switcher, 1, 0);
+                //grid.Children.Add(switcher, 1, 0);
 
-                /*Add a tap gesture recognizer to the image label 
                 var tapGesRec = new TapGestureRecognizer();
                 tapGesRec.Tapped += (s, e) => {
-                    //var mi = ((MenuItem)s).BindingContext;
-                    DisplayAlert("Alert", (MenuModel)((Label)s), "OK");
+
                 };
-                imageLabel.GestureRecognizers.Add(tapGesRec);*/
+
+                nameLabel.GestureRecognizers.Add(tapGesRec);
 
                 return new ViewCell { View = grid };
             });

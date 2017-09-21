@@ -8,30 +8,10 @@ namespace DGDGConnect
 {
     public sealed class ActiveProfile
     {
-        private static ActiveProfile instance = null;
+        private static UserProfile instance = null;
         private static readonly object padlock = new object();
 
-        String username;
-        String password;
-
-        ActiveProfile()
-        {
-            username = "empty";
-            password = "empty";
-        }
-
-        public String GetName()
-        {
-            return username;
-        }
-
-        public void SetName(String _n)
-        {
-            username = _n;
-        }
-
-
-        public static ActiveProfile Instance
+        public static UserProfile Instance
         {
             get
             {
@@ -39,11 +19,61 @@ namespace DGDGConnect
                 {
                     if (instance == null)
                     {
-                        instance = new ActiveProfile();
+                        instance = new UserProfile();
                     }
                     return instance;
                 }
             }
         }
+
+        public static int VerifyActiveUser()
+        {
+            String userJson = WebMethod.GetResult("load", "users/" + instance.username, "");
+            if (userJson != "Web request failed.")
+            {
+                UserProfile v_test = JsonParser.ParseToUser(userJson);
+
+                if (v_test.password == instance.password)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
+            } else
+            {
+                return 0;
+            }
+        }
+
+        public static int LoadProfile(UserProfile open_UP)
+        {
+            String userJson = WebMethod.GetResult("load", "users/" + open_UP.username, "");
+            if (userJson != "Web request failed.")
+            {
+                UserProfile v_test = JsonParser.ParseToUser(userJson);
+
+                if (v_test.password == open_UP.password)
+                {
+                    instance = v_test;
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public static void UnloadProfile()
+        {
+            instance = new UserProfile();
+        }
+
     }
 }

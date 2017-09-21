@@ -133,3 +133,4 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\Validation.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\PCLCrypto.xml
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\bin\Debug\Validation.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect\obj\Debug\DGDGConnect.MenuPage.xaml.g.cs

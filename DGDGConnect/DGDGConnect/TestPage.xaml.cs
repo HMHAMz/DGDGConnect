@@ -57,8 +57,8 @@ namespace DGDGConnect
         void TestSingleton()
         {
             /* Test Profile Singleton Code: */
-            ActiveProfile testP = ActiveProfile.Instance;
-            DisplayAlert("Alert", "Username test: " + testP.GetName(), "OK");
+            UserProfile testP = ActiveProfile.Instance;
+            DisplayAlert("Alert", "Username test: " + testP.username, "OK");
         }
 
         void TestHTTP()
@@ -68,7 +68,7 @@ namespace DGDGConnect
             WebQueryObj TestObj = new WebQueryObj();
             String testString = WebHandler.GetHTMLResponse(TestObj);
             DisplayAlert("Alert", "Test get: " + testString, "OK");*/
-            String testString = LoadResourceText.GetNetwork("http://introtoapps.com/datastore.php?action=list&appid=12345678");
+            String testString = LoadResourceText.GetNetwork("http://introtoapps.com/datastore.php?action=list&appid=12345678", "GET");
             DisplayAlert("Alert", "Test get: " + testString, "OK");
         }
 

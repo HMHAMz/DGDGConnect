@@ -14,21 +14,25 @@
                     WinPhone="10, 10, 10, 10" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <AbsoluteLayout VerticalOptions="FillAndExpand"  
-                HorizontalOptions="FillAndExpand">
+        <AbsoluteLayout>
             <Image Source="DGDGLogoAND.png"
-                   AbsoluteLayout.LayoutBounds=".5,0.2,0.8,.6" AbsoluteLayout.LayoutFlags="All"
-                   HorizontalOptions="Center" />
+                   AbsoluteLayout.LayoutBounds="0.5,0,200,200"
+                   AbsoluteLayout.LayoutFlags="XProportional" />
             <StackLayout VerticalOptions="FillAndExpand"
                          HorizontalOptions="FillAndExpand"
                          Orientation="Vertical"
                          Spacing="15"
-                         AbsoluteLayout.LayoutBounds="0,0.9,1,0.3" AbsoluteLayout.LayoutFlags="All">
-                <Label Text="This is the Root Page" VerticalOptions="End"/>
-                <Label Text="Login Page" VerticalOptions="End"/>
-                <Button x:Name="LoginButton" Text="Login" IsEnabled="true" Clicked="RootLogin" VerticalOptions="End" BackgroundColor="#7ad3ff"/>
-                <Label VerticalOptions="End" HorizontalOptions="Center" Text="Don't have an account?" />
-                <Label VerticalOptions="End" HorizontalOptions="Center" Text="Click here"/>
+                         AbsoluteLayout.LayoutBounds="0,0.9,1,0.40" 
+                         AbsoluteLayout.LayoutFlags="All">
+                <Label x:Name="LoginText" Text="Login or Create Account" FontSize="Medium" HorizontalOptions="Center" />
+                <Entry x:Name="UserN" Placeholder="Username" />
+                <Entry x:Name="PassW" Placeholder="Password" IsPassword="True" />
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                         Orientation="Horizontal"
+                         Spacing="15">
+                    <Button x:Name="LoginButton" Text="Login" IsEnabled="true" Clicked="RootLogin" VerticalOptions="End" BackgroundColor="#7ad3ff"/>
+                    <Button x:Name="CreateButton" Text="Create User" IsEnabled="true" Clicked="RootCreate" VerticalOptions="End" BackgroundColor="#7ad3ff"/>
+                </StackLayout>
             </StackLayout>
         </AbsoluteLayout>
     </ContentPage.Content>

@@ -53,6 +53,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuModel.cs" />
+    <Compile Include="MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PhoneTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -74,6 +77,7 @@
     </Compile>
     <Compile Include="SlowWebHandler.cs" />
     <Compile Include="UserProfile.cs" />
+    <Compile Include="WebMethod.cs" />
     <Compile Include="WebQueryObj.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

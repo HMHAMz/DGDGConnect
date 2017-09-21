@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Net.Http;
 
 namespace DGDGConnect
 {
@@ -16,19 +16,28 @@ namespace DGDGConnect
 
     class SlowWebHandler
     {
-        public String GetResponse(String webLocation, String type) //accepts a web url and content type, returning result
+        /* Method: Get Response
+         * Accepts the URI, data type and HTTP request method
+         * Returns the web response in string format.           */
+        public String GetResponse(String webLocation, String type, String method = "GET")
         {
+            //Build a web query object, which contains the URI and other HTTP request info
             WebQueryObj queryObj = new WebQueryObj();
-
             queryObj.url = webLocation;
+            queryObj.method = method;
 
+            queryObj.url = queryObj.url.Replace("+", "%2B");
+
+            /*Make the web request - this could be done more effectively by calling outside of Get Response 
+             * (to utilize the Async methodology) */
             var task = MakeAsyncRequest(queryObj, type);
-
+            //Get the response value
             String getValue = task.Result;
 
             return getValue;
         }
 
+        //Debug method used for testing
         public String GetHTMLResponse(WebQueryObj _wr)
         {
             var task = MakeAsyncRequest(_wr, "text/html");
@@ -38,6 +47,7 @@ namespace DGDGConnect
             return getValue;
         }
 
+        //Makes an Asyncronous web request based on passed parameters 
         public static Task<string> MakeAsyncRequest(WebQueryObj _wr, string contentType)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_wr.url);
