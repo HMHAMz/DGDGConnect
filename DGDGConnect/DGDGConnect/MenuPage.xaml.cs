@@ -27,6 +27,11 @@ namespace DGDGConnect
             await Navigation.PushAsync(new TestPage { Title = "Testing Page" });
         }
 
+        async void AdminNav(object sender, EventArgs e) //Quiz Page Navigation
+        {
+            await Navigation.PushAsync(new AdminPage { Title = "Quiz Admin Page" });
+        }
+
         async void Exit(object sender, EventArgs e) //Back to Root Navigation
         {
             ActiveProfile.UnloadProfile();

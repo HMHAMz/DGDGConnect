@@ -33,10 +33,10 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\ob
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Collections.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.IO.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Reflection.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.ObjectModel.dll
-D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Collections.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Net.Requests.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Globalization.dll
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\android\assets\System.Threading.dll

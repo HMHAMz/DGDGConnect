@@ -17,14 +17,28 @@ namespace DGDGConnect
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuizHome : ContentPage
     {
-        Quiz[] quizArray;
+        List<Quiz> ActiveQuizzes;
         int quizViewRows = 2;
 
         public QuizHome()
         {
+            if (QuizContainer.Instance.Count() == 0)
+            {
+                if (QuizContainer.LoadSampleQuiz() == 1)
+                {
+                    DisplayAlert("Alert", "Local Quizzes Succesfully Loaded", "OK");
+                }
+                else
+                {
+                    DisplayAlert("Alert", "Unable to load quizzes...", "OK");
+                }
+            }
+            ActiveQuizzes = QuizContainer.Instance;
             //LoadJson(); //Load the Json resource file into memory
+            /*String data = LoadResourceText.GetLocal("DGDGConnect.quizzes_sample_xamarin.json");
+            quizArray = JsonParser.ParseToQuizArray(data);
             String data = LoadResourceText.GetLocal("DGDGConnect.quizzes_sample_xamarin.json");
-            quizArray = JsonParser.ParseToQuiz(data);
+            quizArray = JsonParser.ParseToQuizList(data);*/
 
             Grid QuizViewGrid = BuildOptionsView(); //Instantiate and get the Grid view containing the of quiz options.
 
@@ -75,7 +89,7 @@ namespace DGDGConnect
             Grid quizGrid = BuildQuizGrid();
 
             int index = 0;
-            foreach (Quiz quizFocus in quizArray)
+            foreach (Quiz quizFocus in ActiveQuizzes)
             {
                 index++;
                 //Create the element vars
@@ -144,7 +158,7 @@ namespace DGDGConnect
                     }
             };
 
-            foreach (Quiz quizFocus in quizArray)
+            foreach (Quiz quizFocus in ActiveQuizzes)
             {
                 for (int i = 1; i <= quizViewRows; i++)
                 {

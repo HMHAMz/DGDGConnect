@@ -15,6 +15,7 @@
                     <Label Text="Testing page" VerticalOptions="Start" HorizontalOptions="Center"/>
                     <Button x:Name="QuizButton" Text="Quizzes" IsEnabled="true" Clicked="QuizNav" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
                     <Button x:Name="TestButton" Text="Testing Page" IsEnabled="true" Clicked="TestNav" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
+                    <Button x:Name="AdminButton" Text="Administration" IsEnabled="true" Clicked="AdminNav" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
                     <Button x:Name="HomeButton" Text="Logout" IsEnabled="true" Clicked="Exit" VerticalOptions="Start" BackgroundColor="#7ad3ff"/>
                 </StackLayout>
             </AbsoluteLayout>

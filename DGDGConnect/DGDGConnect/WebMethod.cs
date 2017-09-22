@@ -20,6 +20,7 @@ namespace DGDGConnect
         //Action types
         static String save_action = "action=save";
         static String load_action = "action=load";
+        static String list_action = "action=list";
 
         public static String Serialize(object s_object)
         {
@@ -41,6 +42,9 @@ namespace DGDGConnect
                     break;
                 case ("load"):
                     p_action = load_action;
+                    break;
+                case ("list"):
+                    p_action = list_action;
                     break;
                 default:
                     break;

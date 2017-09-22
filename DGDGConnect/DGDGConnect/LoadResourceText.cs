@@ -16,15 +16,25 @@ namespace DGDGConnect
             String value;
             Stream stream;
             var assembly = typeof(JsonParser).GetTypeInfo().Assembly;
-
-            stream = assembly.GetManifestResourceStream(location);
-            value = "";
-            using (var reader = new System.IO.StreamReader(stream))
+            try
             {
-                value = reader.ReadToEnd();
-            }
+                stream = assembly.GetManifestResourceStream(location);
+                value = "";
+                using (var reader = new System.IO.StreamReader(stream))
+                {
+                    value = reader.ReadToEnd();
+                }
 
-            return value;
+                return value;
+            }
+            catch (FileNotFoundException ex)
+            {
+                return "File not found.";
+            }
+            catch (Exception ex)
+            {
+                return "Unknown exception.";
+            }
         }
 
         public static String GetNetwork(String url, String method)

@@ -11,11 +11,6 @@ namespace DGDGConnect
     {
         public static String Hash(string toHash)
         {
-            /*byte[] salt = new byte[] { 85, 4, 5, 12, 46, 86, 72, 22 };
-            int iterations = 5;
-            int keyLengthInBytes = 16;
-            byte[] key = NetFxCrypto.DeriveBytes.GetBytes(toHash, salt, iterations, keyLengthInBytes);*/
-
             /* The following cryptographic method is an adaptation of the 'recipe' provided by AArnott
              * Here: https://github.com/AArnott/PCLCrypto/wiki/Crypto-Recipes 
              */
