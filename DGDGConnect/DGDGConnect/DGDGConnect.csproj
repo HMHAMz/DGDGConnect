@@ -42,24 +42,24 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CallerTutorialPage.xaml.cs">
+    <Compile Include="Unused\CallerTutorialPage.xaml.cs">
       <DependentUpon>CallerTutorialPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="CryptoHandler.cs" />
-    <Compile Include="IDialer.cs" />
+    <Compile Include="Unused\IDialer.cs" />
     <Compile Include="JsonParser.cs" />
     <Compile Include="LoadResourceText.cs" />
-    <Compile Include="MainMenu.xaml.cs">
+    <Compile Include="Unused\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MenuModel.cs" />
+    <Compile Include="Unused\MenuModel.cs" />
     <Compile Include="MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PhoneTranslator.cs" />
+    <Compile Include="Unused\PhoneTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -71,10 +71,10 @@
     <Compile Include="QuizHome.xaml.cs">
       <DependentUpon>QuizHome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="QuizID.cs" />
+    <Compile Include="Unused\QuizID.cs" />
     <Compile Include="QuizQuestion.cs" />
     <Compile Include="QuizRun.cs" />
-    <Compile Include="Quizzes.xaml.cs">
+    <Compile Include="Unused\Quizzes.xaml.cs">
       <DependentUpon>Quizzes.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestPage.xaml.cs">
@@ -138,19 +138,19 @@
     <EmbeddedResource Include="user_sample_harry.json" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CallerTutorialPage.xaml">
+    <EmbeddedResource Include="Unused\CallerTutorialPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Quizzes.xaml">
+    <EmbeddedResource Include="Unused\Quizzes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainMenu.xaml">
+    <EmbeddedResource Include="Unused\MainMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

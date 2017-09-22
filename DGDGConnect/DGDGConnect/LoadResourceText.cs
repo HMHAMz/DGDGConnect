@@ -7,6 +7,11 @@ namespace DGDGConnect
 {
     public static class LoadResourceText
     {
+        /* Class:       LoadResourceText
+        * Programmer:   Harry Martin
+        * Description:  This class holds publically accessible methods that loads the json contents
+        *               Depending on the method, this is either local or online data
+        */
         public static String GetLocal(String location)
         {
             /* Method: GetLocal

@@ -13,7 +13,7 @@ namespace DGDGConnect
     {
         /* Class: JsonParser
         * Programmer: Harry Martin
-        * Description: This class will deserialize the passed string into the methods object type. */
+        * Description: This class will deserialize the passed data string into the methods object type. */
 
         public static Quiz[] ParseToQuizArray(String data)
         {

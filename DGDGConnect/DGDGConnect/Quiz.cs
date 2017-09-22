@@ -9,6 +9,10 @@ namespace DGDGConnect
 {
     public class Quiz
     {
+        /* Class:       Quiz
+        *  Programmer:  Harry Martin
+        *  Description: This class holds the Quiz data, including the array of Question objects
+        */
         public string id { get; set; }
         public string title { get; set; }
         public List<QuizQuestion> questions { get; set; }

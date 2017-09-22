@@ -13,16 +13,21 @@ using Xamarin.Forms.Xaml;
 
 namespace DGDGConnect
 {
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuizHome : ContentPage
     {
+        /* Class:       QuizHome
+         * Programmer:  Harry Martin
+         * Type:        Content Page (UI)
+         * Description: This page utilizes the QuizContainer Singleton to build the Quiz list display dynamically
+         *              The list is clickable such that individual quizzes can be selected and openned
+         */
         List<Quiz> ActiveQuizzes;
         int quizViewRows = 2;
 
         public QuizHome()
         {
-            if (QuizContainer.Instance.Count() == 0)
+            if (QuizContainer.Instance.Count() == 0) // If no quiz data has currently been loaded, attempt to load the local sample quizzes
             {
                 if (QuizContainer.LoadSampleQuiz() == 1)
                 {
@@ -33,12 +38,8 @@ namespace DGDGConnect
                     DisplayAlert("Alert", "Unable to load quizzes...", "OK");
                 }
             }
+
             ActiveQuizzes = QuizContainer.Instance;
-            //LoadJson(); //Load the Json resource file into memory
-            /*String data = LoadResourceText.GetLocal("DGDGConnect.quizzes_sample_xamarin.json");
-            quizArray = JsonParser.ParseToQuizArray(data);
-            String data = LoadResourceText.GetLocal("DGDGConnect.quizzes_sample_xamarin.json");
-            quizArray = JsonParser.ParseToQuizList(data);*/
 
             Grid QuizViewGrid = BuildOptionsView(); //Instantiate and get the Grid view containing the of quiz options.
 
@@ -54,38 +55,12 @@ namespace DGDGConnect
 
         }
 
-
-        /* void LoadJson()
-        {
-            try
-            {
-                var assembly = typeof(QuizHome).GetTypeInfo().Assembly;
-                stream = assembly.GetManifestResourceStream("DGDGConnect.quizzes_sample_xamarin.json");
-                string jsonInput = "";
-                using (var reader = new System.IO.StreamReader(stream))
-                {
-                    jsonInput = reader.ReadToEnd();
-                }
-                
-                quizArray = JsonConvert.DeserializeObject<Quiz[]>(jsonInput);
-                DisplayAlert("Alert", "Json File Loaded. Title #2 value: " + quizArray[1].title.ToString(), "OK"); //! Debug code, to be removed
-            }
-            catch (FileNotFoundException ex)
-            {
-                DisplayAlert("Alert", "JSON File not found...", "OK");
-            }
-            catch (Exception ex)
-            {
-                DisplayAlert("Alert", "Unknown exception..." + ex + "\n Json Stream Value: " + stream, "OK");
-            }
-        }*/
-
         Grid BuildOptionsView()
         {
-            /* Method: BuildOptionsView
-             * Programmer: Harry Martin
+            /* Method:      BuildOptionsView
+             * Programmer:  Harry Martin
              * Description: This method manages the construction of the Grid View construction
-             Which includes the binding of the loaded quiz objects to their UI elements */
+                            Which includes the binding of the loaded quiz objects to their UI elements */
             Grid quizGrid = BuildQuizGrid();
 
             int index = 0;
@@ -97,7 +72,6 @@ namespace DGDGConnect
                 var scoreLabel = new Label { FontAttributes = FontAttributes.Italic };
                 var idLabel = new Label { HorizontalTextAlignment = TextAlignment.Start, VerticalTextAlignment = TextAlignment.Center };
                 var goButton = new Button { Text = "Go" };
-                //var switcher = new Switch { }; //!Debug Code, to be removed
 
                 //Set the button links
                 goButton.Clicked += delegate {
@@ -106,20 +80,15 @@ namespace DGDGConnect
 
                 //Set the Bindings
                 titleLabel.SetBinding(Label.TextProperty, "title");
-                //scoreLabel.SetBinding(Label.TextProperty, "score"); //! Removed from UI
                 idLabel.SetBinding(Label.TextProperty, "id");
 
                 //Set the Binding Contexts
                 titleLabel.BindingContext = quizFocus;
-                //scoreLabel.BindingContext = quizFocus; //! Removed from UI
                 idLabel.BindingContext = quizFocus;
 
-                //switcher.SetBinding(Switch.IsToggledProperty, "ToggleAnswer");
-
                 /*Add the elements to the parent Grid
-                 *index * quizViewRows = The current Quiz Index's row*/
+                 * (index) X (quizViewRows) = The current Quiz Index's row*/
                 quizGrid.Children.Add(titleLabel, 1, index * quizViewRows);
-                //quizGrid.Children.Add(scoreLabel, 1, index * quizViewRows + 1); //! Removed from UI
                 quizGrid.Children.Add(idLabel, 0, index * quizViewRows);
                 quizGrid.Children.Add(goButton, 2, index * quizViewRows);
 
@@ -127,21 +96,16 @@ namespace DGDGConnect
                 Grid.SetRowSpan(idLabel, 2);
                 Grid.SetRowSpan(goButton, 2);
                 Grid.SetColumnSpan(goButton, 2);
-
-
-                //grid.Children.Add(switcher, 1, 3);
-
             }
-            
             return quizGrid;
         }
 
         Grid BuildQuizGrid()
         {
-            /* Method: BuildQuizGrid
-             * Programmer: Harry Martin
+            /* Method:      BuildQuizGrid
+             * Programmer:  Harry Martin
              * Description: This method builds the Grid container that will hold all the Quiz list UI labels
-             This is done dynamically based on the number of quiz elements in the Quiz Array loaded*/
+                            This is done dynamically based on the number of quiz elements in the Quiz Array loaded*/
             var quizGrid = new Grid() 
             {
                 RowSpacing = 2,
@@ -163,10 +127,8 @@ namespace DGDGConnect
                 for (int i = 1; i <= quizViewRows; i++)
                 {
                     quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-                    //DisplayAlert("Alert", "Row added to quizGrid: " + i, "OK"); //! Debug code, to be removed
                 }
             }
-
             quizGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto }); //Adds a final row to prevent stretching of final element
 
             return quizGrid;

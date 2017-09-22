@@ -9,6 +9,12 @@ namespace DGDGConnect
 {
     class WebMethod
     {
+       /* Class:        WebMethod
+       *  Programmer:   Harry Martin
+       *  Dependencies: LoadResourceText
+       *  Description:  This class holds the public web-query methods
+       *                designed to simplify the HTTP GET/POST requests 
+       */
         //global vars
         static String URL = "http://introtoapps.com/datastore.php?";
         static String APPID = "appid=216022543";
@@ -24,7 +30,7 @@ namespace DGDGConnect
 
         public static String Serialize(object s_object)
         {
-            //Serialize and encode the object
+            //Serialize the passed object into Json
             String enc_json = JsonConvert.SerializeObject(s_object);
 
             return enc_json;
@@ -34,6 +40,7 @@ namespace DGDGConnect
         {
             String postResult;
             String URI;
+
             // The following switch allows the programmer to define an action in lamence terms and still function
             switch (p_action)
             {
@@ -68,7 +75,6 @@ namespace DGDGConnect
             catch (Exception ex)
             {
                 //Request failed (likely bad parameters)
-                //postResult = "The POST attempt failed: \n "  + URI + "\n Exception: " + ex;
                 postResult = "Web request failed.";
             }
             return postResult;

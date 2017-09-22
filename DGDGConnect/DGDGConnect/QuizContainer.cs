@@ -8,10 +8,15 @@ namespace DGDGConnect
 {
     public sealed class QuizContainer
     {
+        /* Class:        QuizContainer
+        *  Programmer:   Harry Martin
+        *  Description:  This class is implemented as a singleton and stores the Quiz containing list
+        *                It also implements the quiz loading methods
+        */
         private static List<Quiz> instance = null;
         private static readonly object padlock = new object();
 
-        public static List<Quiz> Instance
+        public static List<Quiz> Instance //returns the existing instance OR build one if it doesn't exist
         {
             get
             {
@@ -28,6 +33,10 @@ namespace DGDGConnect
 
         public static int LoadWebQuiz(String QuizID)
         {
+            /* Method:      LoadWebQuiz
+            *  Description: Accepts a QuizID String
+            *               Which is then used to download the matching database quiz and parse to an object
+            */
             String quizJson = WebMethod.GetResult("load", "quizzes/" + QuizID, "");
             if (quizJson != "Web request failed.")
             {
@@ -42,6 +51,10 @@ namespace DGDGConnect
 
         public static int UploadQuiz(String QuizID)
         {
+            /* Method:      UploadQuiz
+            *  Description: Accepts a QuizID String
+            *               Which is then used to upload the matching locally (in memory) stored quiz in the online database
+            */
             if (instance.Count != 0)
             {
                 foreach (Quiz f_quiz in instance)
@@ -68,6 +81,9 @@ namespace DGDGConnect
 
         public static String LoadWebQuizzes()
         {
+            /* Method:      WebQuizzes
+            *  Description: Downloads all the quizes stored in the online database
+            */
             UnloadQuizzes();
 
             String listJson = WebMethod.GetResult("list", "quizzes", "");
@@ -94,6 +110,9 @@ namespace DGDGConnect
 
         public static int LoadSampleQuiz()
         {
+            /* Method:      LoadSampleQuiz
+            *  Description: Loads the locally stored sample quiz array into memory
+            */
             List<Quiz> t_quizList;
 
             String data = LoadResourceText.GetLocal("DGDGConnect.quizzes_sample_xamarin.json");
@@ -112,6 +131,9 @@ namespace DGDGConnect
 
         public static void UnloadQuizzes()
         {
+            /* Method:      UnloadQuizzes
+            *  Description: Unloads all quiz data from the local singleton
+            */
             instance = new List<Quiz>();
         }
 

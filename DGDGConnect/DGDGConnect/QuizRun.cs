@@ -9,27 +9,41 @@ namespace DGDGConnect
 {
     public class QuizRun : ContentPage
     {
+        /* Class:       QuizRun
+         * Programmer:  Harry Martin
+         * Type:        Content Page (UI)
+         * Description: This page accepts a Quiz object and builds the quiz content dynamically
+         *              based on the variables of the Quiz loaded.
+         */
 
-        int questionViewRows = 3; //number of rows per Quiz Question
-        Quiz thisQuiz;
-        int currentPage = 1;
-        int minQ = 0;
-        int maxQ = 0;
-        List<int> PageQIDs = new List<int>();
-        List<QuizQuestion> ThisPageQs = new List<QuizQuestion>();
-        QuizQuestion[] PageQuestions = new QuizQuestion[] { };
+        int questionViewRows = 3;   //number of rows per Quiz Question
+        Quiz thisQuiz;              //quiz object
+        int currentPage = 1;        //page counter
+        int minQ = 0;               //page low question number
+        int maxQ = 0;               //page upper question number
+        List<int> PageQIDs = new List<int>();   //List of question ID's 
+        List<QuizQuestion> ThisPageQs = new List<QuizQuestion>();   //List containing loaded Quiz questions
+
+        //QuizQuestion[] PageQuestions = new QuizQuestion[] { }; 
 
         public QuizRun(Quiz p_Quiz)
         {
+            /* Method:      QuizRun
+            *  Description: Accepts a Quiz object and builds the page content         
+            */
             thisQuiz = p_Quiz;
 
+            //allows for content to be updated during operation, allowing for multiple views of content
             updatePageQuestions();
-
-            updatePageContent(); //allows for content to be updated during operation, allowing for multiple views of content
+            updatePageContent(); 
         }
 
         void updatePageQuestions()
         {
+            /* Method:      updatePageQuestions
+            *  Description: Builds the 'current' page questions list, based on the current page ID
+            *               If there is only one 'page' defined, then all questions are built
+            */
             try
             {
                 if (thisQuiz.questionsPerPage != null)
@@ -39,19 +53,19 @@ namespace DGDGConnect
 
                     if (ThisPageQs != null || ThisPageQs.Count != 0)
                         ThisPageQs.Clear();
-                    //Get min and max Q from quiz information and current page number
+                //Get min and max Q from quiz information and current page number
                     for (int i = currentPage; i > 1; i--) //for every page up until current, add question count
                     {
                         minQ = minQ + thisQuiz.questionsPerPage[i - 2];
                     }
                     maxQ = minQ + (thisQuiz.questionsPerPage[currentPage - 1]-1); //get max question id
                     //DEBUG: DisplayAlert("Alert", "\nPage Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
-                    //Build list of question ID's from min and max question vars
+                //Build list of question ID's from min and max question vars
                     for (int i = minQ; i <= maxQ; i++)
                     {
                         PageQIDs.Add(i);
                     }
-                    //Build list of complete questions from Question ID's
+                //Build list of complete questions from Question ID's
                     foreach (int QID in PageQIDs)
                     {
                         foreach (QuizQuestion Question in thisQuiz.questions)
@@ -62,37 +76,6 @@ namespace DGDGConnect
                             }
                         }
                     }
-
-                    /*minQ = 0;
-
-                    if (ThisPageQs != null || ThisPageQs.Count != 0)
-                        ThisPageQs.Clear();
-
-                    for (int i = 1; i < currentPage; i++) //for every page up until current, add question count
-                    {
-                        minQ = minQ + thisQuiz.questionsPerPage[i-1];
-                    }
-                    maxQ = minQ + (thisQuiz.questionsPerPage[currentPage - 1] - 1); //get max question id
-
-                    int index_PageQuestions = 0;
-                    for (int question_i = minQ; question_i <= maxQ; question_i++) //for the pages each question
-                    {
-                        //PageQuestions[index_PageQuestions] = thisQuiz.questions[question_i]; //add the question to the new array ! Remove?
-                        ThisPageQs.Add(thisQuiz.questions[question_i]);
-                        index_PageQuestions++;
-                    }
-                    DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");*/
-                    /*if (thisQuiz.questionsPerPage.Count() > 1)
-                    {
-                        DisplayAlert("Alert", "Multiple Pages to be displayed... \n Current Page = " + currentPage + "\n Number of pages = " + thisQuiz.questionsPerPage.Count() + " \n Questions per page = " + String.Join(", ", thisQuiz.questionsPerPage.ToArray()) + "\n Current Page Max Q ID = " + thisQuiz.questionsPerPage[currentPage - 1], "OK");
-                        minQ = 0;
-                        for (int i = 0; i < currentPage - 1; i++)
-                        {
-                            minQ = minQ + thisQuiz.questionsPerPage[i];
-                        }
-                        maxQ = minQ + thisQuiz.questionsPerPage[currentPage - 1];
-                        DisplayAlert("Alert", "\n Page Min Q id= " + minQ + "Page Max Q id:" + maxQ, "OK");
-                    }*/
                 }
                 else
                 {
@@ -109,6 +92,9 @@ namespace DGDGConnect
 
         void updatePageContent()
         {
+            /* Method:      updatePageContent
+            *  Description: Builds the current page's content view, based on the current question list    
+            */
             try
             {
                 var scrollView = new ScrollView();
@@ -138,11 +124,10 @@ namespace DGDGConnect
             /* Method: BuildQuestionsView
              * Programmer: Harry Martin
              * Description: This method manages the construction of the Grid View
-             Which includes the binding of the quiz question objects to their UI elements */
+             *              Which includes the binding of the quiz question objects to their UI elements 
+             */
 
             //Get the number of questions per page and build the appropriate variables such that the pages can be dynamically built
-           
-
             Grid quizGrid = BuildQuestionGrid();
 
             int index = 0;
@@ -265,7 +250,9 @@ namespace DGDGConnect
 
         Grid AddNewRow(Grid q_Grid)
         {
-            /* Currently unused, this method simply adds a new row to the Grid element passed. */ 
+            /* Method:      QuizRun
+            * Description:  Currently unused, this method simply adds a new row to the Grid element passed. 
+            */
             q_Grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto, });
             return q_Grid;
         }
@@ -275,7 +262,8 @@ namespace DGDGConnect
             /* Method: BuildQuestionGrid
              * Programmer: Harry Martin
              * Description: This method builds the Grid container that will hold all the Quiz question UI elements
-             This is done dynamically based on the number of quiz questions in the Quiz object loaded*/
+                            This is done dynamically based on the number of quiz questions in the Quiz object loaded
+             */
             var questionGrid = new Grid()
             {
                 RowSpacing = 2,

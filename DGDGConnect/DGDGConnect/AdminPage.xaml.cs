@@ -12,6 +12,11 @@ namespace DGDGConnect
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AdminPage : ContentPage
     {
+        /* Class:        AdminPage
+        *  Programmer:   Harry Martin
+        *  Type:         Content Page (UI)
+        *  Description:  This class defines the methods the admin page uses
+        */
         public AdminPage()
         {
             InitializeComponent();

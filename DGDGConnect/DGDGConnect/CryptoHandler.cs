@@ -9,6 +9,10 @@ namespace DGDGConnect
 {
     public static class CryptoHandler
     {
+        /* Class:       LoadResourceText
+        * Programmer:   Harry Martin
+        * Description:  This class holds publically accessible methods that hashes the string passed
+        */
         public static String Hash(string toHash)
         {
             /* The following cryptographic method is an adaptation of the 'recipe' provided by AArnott

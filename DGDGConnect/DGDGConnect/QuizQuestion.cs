@@ -9,6 +9,10 @@ namespace DGDGConnect
 {
     public class QuizQuestion
     {
+        /* Class:        QuizQuestion
+        *  Programmer:   Harry Martin
+        *  Description:  This class is used to store Quiz question data
+        */
         public int id { get; set; }
         public string text { get; set; }
         public string type { get; set; }

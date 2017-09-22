@@ -8,9 +8,17 @@ using Xamarin.Forms;
 
 namespace DGDGConnect
 {
-   
     public partial class MainPage : ContentPage
     {
+        /* Class:      MainPage
+        * Programmer:  Harry Martin
+        * Type:        Content Page (UI)
+        * Description: This page is a static page which accepts user input.
+        *              Utilizes the ActiveProfile Singleton container and POST/GET
+        *              requests to either verify entered credentials with those stored online
+        *              OR to build a new user profile and store online.
+        *              Utilizes Cryptography to has passwords.
+        */
         UserProfile testP;
         public MainPage()
         {
@@ -18,13 +26,14 @@ namespace DGDGConnect
             InitializeComponent();
         }
 
-        void JustButtonMethod(object sender, EventArgs e)
+        async void RootLogin(object sender, EventArgs e) //LOGIN button
         {
-            //await Navigation.PushAsync(new CallerTutorialPage());
-        }
-
-        async void RootLogin(object sender, EventArgs e)
-        {
+            /* Method:      RootLogin
+            * Programmer:   Harry Martin
+            * Description:  This method accepts the user input
+            *               And attempt to verify the entered password
+            *               against the hashed stored one
+            */
             //Get the values from the user prompts
             String w_username = UserN.Text;
             String w_password = PassW.Text;
@@ -33,20 +42,19 @@ namespace DGDGConnect
             UserProfile local_UP = new UserProfile();
             local_UP.username = w_username;
             local_UP.password = CryptoHandler.Hash(w_password);
-            //await DisplayAlert("Alert", "Password Hash: " + local_UP.password, "OK");
+
             String userJson = WebMethod.GetResult("load", "users/" + local_UP.username, "");
             UserProfile v_test = JsonParser.ParseToUser(userJson);
 
             //DEBUG: await DisplayAlert("Alert", "Comparing: \n" + local_UP.password + "\n and: \n" + v_test.password, "OK");
 
-            switch (ActiveProfile.LoadProfile(local_UP))
+            switch (ActiveProfile.LoadProfile(local_UP)) //switch depending on results of profile loading methodlogy
             {
                 case (0):
                     await DisplayAlert("Alert", "Account not found.", "OK");
                     break;
                 case (1):
                     await Navigation.PushAsync(new MenuPage { Title = "Main Menu" });
-                    //await Navigation.PushAsync(new TestPage { Title = "Test Page" });
                     break;
                 case (2):
                     await DisplayAlert("Alert", "Login Failed.\nWrong password.", "OK");
@@ -54,8 +62,15 @@ namespace DGDGConnect
             }            
         }
 
-        async void RootCreate(object sender, EventArgs e)
+        async void RootCreate(object sender, EventArgs e) //CREATE account button
         {
+            /* Method:      RootCreate
+            * Programmer:   Harry Martin
+            * Description:  This method accepts the user input
+            *               Creates a new user object and writes it to the online database
+            *               This will overwrite any existing user on the server with the same name
+            *               The password will be hashed (SHA254)
+            */
             //Clear current loaded user (if any)
             ActiveProfile.UnloadProfile();
 

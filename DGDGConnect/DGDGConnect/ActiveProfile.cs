@@ -8,6 +8,11 @@ namespace DGDGConnect
 {
     public sealed class ActiveProfile
     {
+        /* Class:        ActiveProfile
+        *  Programmer:   Harry Martin
+        *  Description:  This class is implemented as a singleton and stores the active UserProfile
+        *                It also implements the profile loading methods
+        */
         private static UserProfile instance = null;
         private static readonly object padlock = new object();
 
@@ -49,6 +54,10 @@ namespace DGDGConnect
 
         public static int LoadProfile(UserProfile open_UP)
         {
+            /* Method:      LoadProfile
+            *  Description: Accepts a UserProfile object
+            *               Which is then used to download load the matching database stored user profile
+            */
             String userJson = WebMethod.GetResult("load", "users/" + open_UP.username, "");
             if (userJson != "Web request failed.")
             {
