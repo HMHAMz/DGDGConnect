@@ -275,3 +275,4 @@ D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bi
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.NCrypt.xml
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\PInvoke.Windows.Core.xml
 D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\bin\Debug\Validation.xml
+D:\Projects\MobileComputing\Main\DGDG Connect\DGDGConnect\DGDGConnect.Android\obj\Debug\res\drawable\splashscreen.png

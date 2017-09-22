@@ -2560,7 +2560,8 @@ containing a value of this type.
         public static final int mr_ic_pause_light=0x7f02009f;
         public static final int mr_ic_play_dark=0x7f0200a0;
         public static final int mr_ic_play_light=0x7f0200a1;
-        public static final int notification_template_icon_bg=0x7f0200a2;
+        public static final int notification_template_icon_bg=0x7f0200a3;
+        public static final int splashscreen=0x7f0200a2;
     }
     public static final class id {
         public static final int action0=0x7f07008b;
@@ -2841,7 +2842,7 @@ containing a value of this type.
         public static final int Animation_AppCompat_Dialog=0x7f0a00a3;
         public static final int Animation_AppCompat_DropDownUp=0x7f0a00a4;
         public static final int Animation_Design_BottomSheetDialog=0x7f0a015a;
-        public static final int AppCompatDialogStyle=0x7f0a0174;
+        public static final int AppCompatDialogStyle=0x7f0a0175;
         public static final int Base_AlertDialog_AppCompat=0x7f0a00a5;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0a00a6;
         public static final int Base_Animation_AppCompat_Dialog=0x7f0a00a7;
@@ -2989,10 +2990,10 @@ containing a value of this type.
         public static final int CardView=0x7f0a0017;
         public static final int CardView_Dark=0x7f0a0019;
         public static final int CardView_Light=0x7f0a001a;
-        public static final int MainTheme=0x7f0a0172;
+        public static final int MainTheme=0x7f0a0173;
         /**  Base theme applied no matter what API 
          */
-        public static final int MainTheme_Base=0x7f0a0173;
+        public static final int MainTheme_Base=0x7f0a0174;
         public static final int Platform_AppCompat=0x7f0a0032;
         public static final int Platform_AppCompat_Light=0x7f0a0033;
         public static final int Platform_ThemeOverlay_AppCompat=0x7f0a0095;
@@ -3017,6 +3018,9 @@ containing a value of this type.
         public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0a004e;
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0a004f;
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0a0050;
+        /**  Splash screen style 
+         */
+        public static final int SplashTheme=0x7f0a0172;
         public static final int TextAppearance_AppCompat=0x7f0a00d1;
         public static final int TextAppearance_AppCompat_Body1=0x7f0a00d2;
         public static final int TextAppearance_AppCompat_Body2=0x7f0a00d3;

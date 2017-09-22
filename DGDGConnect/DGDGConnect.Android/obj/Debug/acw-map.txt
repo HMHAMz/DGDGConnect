@@ -2,6 +2,10 @@ DGDGConnect.Droid.MainActivity, DGDGConnect.Android;md5401bf8ce4cd8d262c615a331d
 DGDGConnect.Droid.MainActivity, DGDGConnect.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5401bf8ce4cd8d262c615a331d171bd86.MainActivity
 DGDGConnect.Droid.MainActivity;md5401bf8ce4cd8d262c615a331d171bd86.MainActivity
 dgdgconnect.droid.MainActivity;md5401bf8ce4cd8d262c615a331d171bd86.MainActivity
+DGDGConnect.Droid.SplashScreen, DGDGConnect.Android;md5401bf8ce4cd8d262c615a331d171bd86.SplashScreen
+DGDGConnect.Droid.SplashScreen, DGDGConnect.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5401bf8ce4cd8d262c615a331d171bd86.SplashScreen
+DGDGConnect.Droid.SplashScreen;md5401bf8ce4cd8d262c615a331d171bd86.SplashScreen
+dgdgconnect.droid.SplashScreen;md5401bf8ce4cd8d262c615a331d171bd86.SplashScreen
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
